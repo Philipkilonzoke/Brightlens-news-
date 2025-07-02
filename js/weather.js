@@ -51,10 +51,15 @@ class EnhancedWeatherApp {
                 }
             });
             
-            // Remove search suggestions - direct search only
-            // cityInput.addEventListener('input', this.debounce((e) => {
-            //     this.showSearchSuggestions(e.target.value);
-            // }, 300));
+            // Add search suggestions functionality
+            cityInput.addEventListener('input', this.debounce((e) => {
+                const query = e.target.value.trim();
+                if (query.length >= 1) {
+                    this.showSearchSuggestions(query);
+                } else {
+                    this.hideSuggestions();
+                }
+            }, 300));
         }
         
         if (locationBtn) {
@@ -88,12 +93,12 @@ class EnhancedWeatherApp {
             retryBtn.addEventListener('click', () => this.loadDefaultLocation());
         }
 
-        // Close suggestions when clicking outside (disabled for direct search)
-        // document.addEventListener('click', (e) => {
-        //     if (!e.target.closest('.search-container')) {
-        //         this.hideSuggestions();
-        //     }
-        // });
+        // Close suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-container')) {
+                this.hideSuggestions();
+            }
+        });
     }
 
     /**
@@ -696,7 +701,7 @@ class EnhancedWeatherApp {
      * Show search suggestions
      */
     async showSearchSuggestions(query) {
-        if (query.length < 3) {
+        if (query.length < 1) {
             this.hideSuggestions();
             return;
         }
