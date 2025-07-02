@@ -114,5 +114,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Changelog
 
-Changelog:
-- July 02, 2025. Initial setup
+- July 02, 2025: Enhanced weather category with modern glassmorphism design
+  - Added OpenWeather API integration with real-time data
+  - Implemented dynamic backgrounds that adapt to weather conditions
+  - Created 24-hour and 7-day forecast displays with interactive charts
+  - Added geolocation support and intelligent search with city suggestions
+  - Integrated Celsius/Fahrenheit toggle and refresh functionality
+  - Designed responsive glassmorphism UI with smooth animations
+  - Ensured full theme compatibility across all 6 existing themes
+  - Added accessibility features and mobile optimization
+- July 02, 2025: Initial setup

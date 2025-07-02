@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live TV - Brightlens News</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;"><i class="fas fa-newspaper"></i> Brightlens News</a></h1>
+                </div>
+                <nav class="nav">
+                    <div class="nav-links">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="weather.html" class="nav-link">Weather</a>
+                        <a href="live-tv.html" class="nav-link active">Live TV</a>
+                    </div>
+                    <div class="nav-controls">
+                        <button id="theme-toggle" class="theme-toggle" title="Change Theme">
+                            <i class="fas fa-palette"></i>
+                        </button>
+                    </div>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button class="sidebar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <div class="sidebar-divider"></div>
+                <a href="weather.html" class="sidebar-link">
+                    <i class="fas fa-cloud-sun"></i> Weather
+                </a>
+                <a href="live-tv.html" class="sidebar-link active">
+                    <i class="fas fa-tv"></i> Live TV
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="category-header">
+                <h2><i class="fas fa-tv"></i> Live TV Channels</h2>
+                <p>Watch live news broadcasts from around the world</p>
+            </div>
+
+            <!-- Live TV Grid -->
+            <div class="tv-grid">
+                <!-- CNN -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <img src="https://cdn.cnn.com/cnn/.e/img/3.0/global/misc/cnn-logo.png" alt="CNN" onerror="this.style.display='none'">
+                    </div>
+                    <div class="tv-info">
+                        <h3>CNN International</h3>
+                        <p>Breaking news and analysis from around the world</p>
+                        <a href="https://edition.cnn.com/live-tv" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BBC -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <img src="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png" alt="BBC" onerror="this.style.display='none'">
+                    </div>
+                    <div class="tv-info">
+                        <h3>BBC World News</h3>
+                        <p>Global news and current affairs coverage</p>
+                        <a href="https://www.bbc.com/news/live" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Al Jazeera -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>Al Jazeera</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>Al Jazeera English</h3>
+                        <p>International news with Middle Eastern perspective</p>
+                        <a href="https://www.aljazeera.com/live/" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sky News -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>Sky News</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>Sky News</h3>
+                        <p>Breaking news from the UK and around the world</p>
+                        <a href="https://news.sky.com/watch-live" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- France 24 -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>France 24</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>France 24</h3>
+                        <p>International news and current affairs</p>
+                        <a href="https://www.france24.com/en/live" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DW News -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>DW</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>DW News</h3>
+                        <p>German international broadcaster</p>
+                        <a href="https://www.dw.com/en/live-tv/s-100825" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kenyan TV Channels -->
+            <div class="category-header" style="margin-top: 3rem;">
+                <h2><i class="fas fa-flag"></i> Kenyan TV Channels</h2>
+                <p>Local news and entertainment from Kenya</p>
+            </div>
+
+            <div class="tv-grid">
+                <!-- Citizen TV -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>Citizen TV</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>Citizen TV</h3>
+                        <p>Kenya's leading television station</p>
+                        <a href="https://www.citizen.digital/tv" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KTN News -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>KTN News</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>KTN News</h3>
+                        <p>24-hour Kenyan news channel</p>
+                        <a href="https://www.standardmedia.co.ke/ktn/ktnnews/live" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NTV Kenya -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>NTV</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>NTV Kenya</h3>
+                        <p>News, current affairs and entertainment</p>
+                        <a href="https://www.nation.co.ke/tv" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- K24 TV -->
+                <div class="tv-card">
+                    <div class="tv-preview">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="tv-placeholder">
+                            <i class="fas fa-tv"></i>
+                            <span>K24</span>
+                        </div>
+                    </div>
+                    <div class="tv-info">
+                        <h3>K24 TV</h3>
+                        <p>News and current affairs</p>
+                        <a href="https://www.k24tv.co.ke/live/" target="_blank" rel="noopener noreferrer" class="tv-link">
+                            <i class="fas fa-external-link-alt"></i> Watch Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="tv-disclaimer">
+                <p><i class="fas fa-info-circle"></i> 
+                   <strong>Note:</strong> Live TV streams are provided by third-party services. 
+                   Availability may vary based on your location and the broadcaster's streaming policies. 
+                   Some streams may require registration or subscription.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Theme Selector Modal -->
+    <div id="theme-modal" class="theme-modal">
+        <div class="theme-modal-content">
+            <div class="theme-modal-header">
+                <h3>Choose Theme</h3>
+                <button class="theme-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="theme-grid">
+                <button class="theme-option" data-theme="default">
+                    <div class="theme-preview theme-preview-default"></div>
+                    <span>Default</span>
+                </button>
+                <button class="theme-option" data-theme="dark">
+                    <div class="theme-preview theme-preview-dark"></div>
+                    <span>Dark</span>
+                </button>
+                <button class="theme-option" data-theme="blue">
+                    <div class="theme-preview theme-preview-blue"></div>
+                    <span>Ocean Blue</span>
+                </button>
+                <button class="theme-option" data-theme="green">
+                    <div class="theme-preview theme-preview-green"></div>
+                    <span>Forest Green</span>
+                </button>
+                <button class="theme-option" data-theme="purple">
+                    <div class="theme-preview theme-preview-purple"></div>
+                    <span>Royal Purple</span>
+                </button>
+                <button class="theme-option" data-theme="orange">
+                    <div class="theme-preview theme-preview-orange"></div>
+                    <span>Sunset Orange</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Brightlens News</h4>
+                    <p>Your trusted source for comprehensive news coverage and live TV streams.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Latest News</a>
+                        <a href="weather.html">Weather</a>
+                        <a href="live-tv.html">Live TV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brightlens News. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/themes.js"></script>
+    <script>
+        // Live TV specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarClose = document.querySelector('.sidebar-close');
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', () => {
+                    sidebar?.classList.add('open');
+                });
+            }
+
+            if (sidebarClose) {
+                sidebarClose.addEventListener('click', () => {
+                    sidebar?.classList.remove('open');
+                });
+            }
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (sidebar?.classList.contains('open') && 
+                    !sidebar.contains(e.target) && 
+                    !mobileToggle?.contains(e.target)) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Live TV specific styles */
+        .tv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .tv-card {
+            background: var(--surface-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .tv-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tv-preview {
+            position: relative;
+            height: 180px;
+            background: linear-gradient(135deg, #1e293b, #334155);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .tv-preview img {
+            max-width: 60%;
+            max-height: 60%;
+            object-fit: contain;
+        }
+
+        .tv-preview .fas.fa-play-circle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
+        }
+
+        .tv-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .tv-placeholder i {
+            font-size: 3rem;
+        }
+
+        .tv-placeholder span {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .tv-info {
+            padding: 1.25rem;
+        }
+
+        .tv-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .tv-info p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tv-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .tv-link:hover {
+            color: #1d4ed8;
+        }
+
+        .tv-disclaimer {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tv-disclaimer p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .tv-disclaimer i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .tv-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .tv-preview {
+                height: 150px;
+            }
+
+            .tv-info {
+                padding: 1rem;
+            }
+        }
+    </style>
+</body>
+</html>
