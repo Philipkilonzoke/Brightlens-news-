@@ -40,6 +40,10 @@ class EnhancedWeatherApp {
         const cityInput = document.getElementById('city-input');
         const locationBtn = document.getElementById('location-btn');
         
+        if (searchBtn) {
+            searchBtn.addEventListener('click', () => this.searchWeather());
+        }
+        
         if (cityInput) {
             cityInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
@@ -47,9 +51,10 @@ class EnhancedWeatherApp {
                 }
             });
             
-            cityInput.addEventListener('input', this.debounce((e) => {
-                this.showSearchSuggestions(e.target.value);
-            }, 300));
+            // Remove search suggestions - direct search only
+            // cityInput.addEventListener('input', this.debounce((e) => {
+            //     this.showSearchSuggestions(e.target.value);
+            // }, 300));
         }
         
         if (locationBtn) {
@@ -83,12 +88,12 @@ class EnhancedWeatherApp {
             retryBtn.addEventListener('click', () => this.loadDefaultLocation());
         }
 
-        // Close suggestions when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.search-container')) {
-                this.hideSuggestions();
-            }
-        });
+        // Close suggestions when clicking outside (disabled for direct search)
+        // document.addEventListener('click', (e) => {
+        //     if (!e.target.closest('.search-container')) {
+        //         this.hideSuggestions();
+        //     }
+        // });
     }
 
     /**
@@ -138,7 +143,7 @@ class EnhancedWeatherApp {
         if (query) {
             await this.loadWeatherForLocation(query);
             cityInput.value = '';
-            this.hideSuggestions();
+            // No suggestions to hide - direct search only
         }
     }
 
